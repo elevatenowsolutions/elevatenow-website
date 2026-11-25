@@ -17,7 +17,7 @@
 {"@context":"https://schema.org","@type":"Organization","name":"ElevateNow","url":"https://elevatenow.com","description":"Pure-play ServiceNow consulting partner — outcome-anchored scoping, ITSM, ITOM, ITAM, SecOps, GRC, and Generative AI."}
 </script>
 
-<!-- Additional CSS for this page: 5‑column expertise grid, Nova waving arms, visible bubble -->
+<!-- Additional CSS for this page -->
 <style>
   /* 5‑column grid for the "Where we specialize" section */
   .expertise-featured-5 {
@@ -55,6 +55,31 @@
   .mascot-nova .mascot-bubble {
     opacity: 1;
     transform: translateX(0);
+  }
+
+  /* ===== Mobile: keep Nova's name bubble visible ===== */
+  @media (max-width: 720px) {
+    .mascot-nova .mascot-bubble {
+      display: block;
+      opacity: 1;
+      transform: translateX(0);
+      top: 6px;
+      left: 100%;
+      margin-left: 8px;
+      white-space: normal;
+      width: max-content;
+      max-width: min(155px, calc(100vw - 175px));
+      font-size: 0.72rem;
+      padding: 9px 12px;
+      line-height: 1.35;
+      text-align: left;
+      box-shadow: 0 10px 28px rgba(15,14,42,0.15), 0 0 0 1px rgba(15,14,42,0.05);
+    }
+    .mascot-nova .mascot-bubble::before {
+      bottom: 6px;
+      left: -8px;
+      top: auto;
+    }
   }
 </style>
 </head>
@@ -457,7 +482,7 @@
       </div>
     </div>
 
-    <!-- Where we specialize (now 5 cards incl. ITOM) -->
+    <!-- Where we specialize (5 cards incl. ITOM) -->
     <div class="expertise-group">
       <div class="expertise-group-head">
         <span class="group-dot group-dot-deep"></span>
@@ -472,7 +497,7 @@
           <div class="expertise-tags"><span>SAM Pro</span><span>HAM Pro</span><span>Cloud Insights</span></div>
         </article>
 
-        <!-- ITOM (new) -->
+        <!-- ITOM -->
         <article class="expertise-card expertise-card-ai">
           <div class="expertise-card-top"><div class="expertise-icon expertise-icon-ai"><svg viewBox="0 0 24 24" width="24" height="24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18" stroke="currentColor" stroke-width="1.8"/></svg></div></div>
           <h4>ITOM</h4><p>Discovery, service mapping, event management, and CMDB health — full infrastructure visibility with AI‑driven event correlation and predictive alerting.</p>
@@ -502,7 +527,7 @@
       </div>
     </div>
 
-    <!-- Where we deliver across the platform (ITOM replaced with ITBM/SPM) -->
+    <!-- Where we deliver across the platform -->
     <div class="expertise-group">
       <div class="expertise-group-head">
         <span class="group-dot group-dot-breadth"></span>
